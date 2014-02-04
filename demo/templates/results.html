@@ -1,0 +1,39 @@
+{?error}
+	<div class="alert alert-danger"><strong>Error: </strong>{error}</div>
+{:else}
+	{?notice}
+		<div class="alert alert-warning" style="margin-bottom:10px;">
+			<strong>Warning: </strong>{notice}
+		</div>
+	{/notice}
+
+	{?pages}
+		<ul class="search-pagination pagination">
+			<li><a href='javascript:void(0);' class='search-prev'>&laquo;</a></li>
+			<li class='disabled'><span>{page} / {pages}</span></li>
+			<li><a href='javascript:void(0);' class='search-next'>&raquo;</a></li>
+		</ul>
+		{/pages}
+
+	{?results}
+		<div class="search-results">
+			{#results}
+			<div id="sr-{id}" class="search-result" data-id="{id}">
+				<h2><a href="{url}" title="{title}">{title}</a></h2>
+				<p>{description}</p>
+			</div>
+			{/results}
+		</div>
+
+		{?pages}
+		<ul class="search-pagination pagination">
+			<li><a href='javascript:void(0);' class='search-prev'>&laquo;</a></li>
+			<li class='disabled'><span>{page} / {pages}</span></li>
+			<li><a href='javascript:void(0);' class='search-next'>&raquo;</a></li>
+		</ul>
+		{/pages}
+
+	{:else}
+		<p>No results</p>
+	{/results}
+{/error}

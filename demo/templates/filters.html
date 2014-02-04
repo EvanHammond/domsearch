@@ -1,0 +1,28 @@
+{?families}
+	<form class="search-filters col-md-12" role="form">
+	{#families}
+		<h3>{family_name}</h3>
+		{?filters}
+			<div class='filter-family'>
+				{#filters}
+				<div class="checkbox">
+			    <label>
+			      <input id="{family_id}-{filter_id}"
+							name="{family_id}-{filter_id}"
+							type="checkbox"
+							class="search-filter"
+							checked
+						> {filter_label}
+			    </label>
+			  </div>
+				{/filters}
+				<a href='javascript:void(0);' class='filters-show' data-state="less">Show more</a>
+			</div>
+		{:else}
+			<p>No filters in family</p>
+		{/filters}
+	{/families}
+	</form>
+{:else}
+	<p>No filters</p>
+{/families}

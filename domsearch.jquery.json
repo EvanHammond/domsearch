@@ -1,0 +1,27 @@
+{
+	"name": "domsearch",
+	"title": "DomSearch",
+	"description": "jQuery plugin to facilitate DOM search through a search results JSON endpoint.",
+	"keywords": [
+		"jquery",
+		"plugins"
+	],
+	"version": "1.0.0",
+	"author": {
+		"name": "Evan Hammond",
+		"email": "evan.hammond@gmail.com",
+		"url": "https://github.com/evanhammond"
+	},
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	],
+	"bugs": "https://github.com/EvanHammond/domsearch/issues",
+	"homepage": "https://github.com/EvanHammond/domsearch/",
+	"docs": "https://github.com/EvanHammond/domsearch#readme",
+	"download": "https://github.com/EvanHammond/domsearch/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}

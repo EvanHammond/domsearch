@@ -1,0 +1,22 @@
+{
+  "name": "DomSearch",
+  "version": "1.0.0",
+  "authors": [
+    "Evan Hammond <evan.hammond@gmail.com>"
+  ],
+  "description": "jQuery plugin to facilitate DOM search through a search results JSON endpoint",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.1.0",
+    "dustjs-linkedin": "*",
+    "jquery": ">=1.4"
+  }
+}
