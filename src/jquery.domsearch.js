@@ -4,7 +4,11 @@
 					results: {},
 					filters: {},
 					resultsVisible: 8,
-					filtersVisible: 3
+					filtersVisible: 3,
+					viewFilters: "filters",
+					viewResults: "results",
+					$elementFilters: $("#search-filters"),
+					$elementResults: $("#search-results")
 			};
 
 	/**
@@ -169,9 +173,11 @@
 			};
 			data = $.extend({}, defaults, options);
 
-			dust.render("results", data, function(err, out) {
-				$("#search-results").html(out).trigger("x-results-rendered");
-			});
+			if (this.options.$elementResults instanceof jQuery) {
+				dust.render(this.options.viewResults, data, function(err, out) {
+					$("#search-results").html(out).trigger("x-results-rendered");
+				});
+			}
 		},
 
 		/**
@@ -183,9 +189,12 @@
 		 */
 		renderFilters: function(data) {
 			data = {families:data};
-			dust.render("filters", data, function(err, out) {
-				$("#search-filters").html(out).trigger("x-filters-rendered");
-			});
+
+			if (this.options.$elementFilters instanceof jQuery) {
+				dust.render(this.options.viewFilters, data, function(err, out) {
+					$("#search-filters").html(out).trigger("x-filters-rendered");
+				});
+			}
 		},
 
 		/**

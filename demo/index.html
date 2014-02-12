@@ -27,7 +27,11 @@
 
 			$(document).ready(function() {
 				$('#search-content').domsearch({
-					response: resp
+					response: resp,
+					elementFilters: $("#search-filters"),
+					elementResults: $("#search-results"),
+					viewFilters: "filters",
+					viewResults: "results"
 				});
 				$(".dom-remove").remove();
 			});
