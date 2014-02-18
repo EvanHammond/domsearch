@@ -100,12 +100,13 @@
 		filter: function(e) {
 			var filterId			= e.attr("id"),
 					isChecked			= e.is(":checked"),
-					obj						= this.results[i],
 					isHidden,
 					isFilterable,
+					obj,
 					i;
 
 			for (i in this.results) {
+				obj						= this.results[i],
 				isHidden			= (obj.hasOwnProperty("hiddenBy") && $.inArray(filterId, obj.hiddenBy) !== -1);
 				isFilterable	= (obj.hasOwnProperty("filters") && $.inArray(filterId, obj.filters) !== -1);
 
