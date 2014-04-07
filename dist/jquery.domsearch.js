@@ -56,6 +56,14 @@
 			this.prerender(this.results).paginate().renderResults(this.paginated);
 		},
 
+		update: function(response) {
+			this.filters = response.filterFamilies;
+			this.results = response.searchResults;
+
+			this.renderFilters(this.filters);
+			this.prerender(this.results).paginate().renderResults(this.paginated);
+		},
+
 		/**
 		 * Attaches all event listeners on init
 		 *
